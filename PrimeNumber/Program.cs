@@ -6,19 +6,22 @@ namespace PrimeNumber
     {
         public static void Main(string[] args)
         {
-            int number, counter, divisor=0;
+            int divisor = 0;
             Console.WriteLine("please enter a number:");
-            number = int.Parse(Console.ReadLine());
+            int number = int.Parse(Console.ReadLine());
 
-            for (counter = 1; counter <= number; counter++)
-                if (number % counter == 0) divisor++;
+            void Prime_Number()
+            {
+                for (int counter = 1; counter <= number; counter++)
+                    if (number % counter == 0) divisor++;
 
-            if (divisor == 2)
-                Console.WriteLine(number + " " + "is prime");
+                if (divisor == 2)
+                    Console.WriteLine(number + " " + "is prime");
 
-            else
-                Console.WriteLine(number + " " + "is not prime");
-
+                else
+                    Console.WriteLine(number + " " + "is not prime");
+            }
+            Prime_Number();
             Console.ReadKey();
         }
     }
